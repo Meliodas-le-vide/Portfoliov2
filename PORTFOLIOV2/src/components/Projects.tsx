@@ -23,7 +23,7 @@ const projects = [
       "Mon prémier portfolio développé avec Next.js et Tailwind CSS. Interface moderne avec animations, terminal interactif, particules, et design responsive. Déployé sur Vercel.",
     technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
     demoLink: "https://portfolio-guyezechiel.vercel.app/",
-    repoLink: "#", 
+    repoLink: "https://github.com/Meliodas-le-vide/Portfolio", 
     image: img1,
   },
 
