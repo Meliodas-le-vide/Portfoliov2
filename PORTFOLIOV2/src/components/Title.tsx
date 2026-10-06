@@ -9,7 +9,7 @@ const Title = ({title} : TitleProps) => {
   return ( 
                <h1 >
                   {/* <SparklesText className="font-bold  uppercase text-3xl text-center text-sky-500"> {title} </SparklesText> */}
-                   <ComicText  className="font-bold  uppercase text-3xl text-center text-sky-500" fontSize={5}>{title}</ComicText>
+                   <ComicText  className="font-bold  uppercase text-2xl text-center text-sky-500" fontSize={4}>{title}</ComicText>
                </h1>  
   )
 }
