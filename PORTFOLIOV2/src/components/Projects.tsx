@@ -3,12 +3,13 @@ import img2 from "../assets/projects/avea.png"
 import img3 from "../assets/projects/movies.png"
 import img4 from "../assets/projects/post-it.png"
 import img1 from "../assets/projects/portfolio.png"
+import img5 from "../assets/projects/ecom.png"
 import { Code, ExternalLink } from "lucide-react"
 
 const projects = [
   {
     id: 1,
-    title: "AVEA — Aller Vivre en Afrique",
+    title: "AVEA - Aller Vivre en Afrique",
     description:
       "Site permettant aux personnes de facilité leurs installation en Côte d'Ivoire. Conception de l'interface responsive, intégration WordPress et personnalisation du thème selon les besoins du client.",
     technologies: ["WordPress", "Ionos", "PHP"],
@@ -29,7 +30,7 @@ const projects = [
 
   {
     id: 3,
-    title: "My Post-it — Gestion de Notes",
+    title: "My Post-it - Gestion de Notes",
     description:
       "Application de gestion de notes façon Post-it. Interface responsive avec Vue.js et Tailwind CSS, connectée à une API REST via Axios pour créer, modifier et supprimer des notes en temps réel.",
     technologies: ["Vue.js", "Tailwind CSS", "TypeScript", "REST API"],
@@ -40,13 +41,24 @@ const projects = [
 
   {
     id: 4,
-    title: "GorgeMovie — Streaming",
+    title: "GorgeMovie - Streaming",
     description:
       "Application de streaming connectée à l'API TMDB. Frontend Next.js + Tailwind, backend NestJS avec modélisation MongoDB. Développement en méthode Agile avec API REST sécurisée.",
     technologies: ["Next.js", "NestJS", "MongoDB", "TMDB API", "Tailwind CSS"],
     demoLink: "https://gorge-movie.vercel.app/",
     repoLink: "#", 
     image: img3,
+  },
+
+    {
+    id: 5,
+    title: "PkangorShop - Ecommerce ",
+    description:
+       "Application e-commerce complète dédiée à la vente de vêtements en ligne. Développée en PHP natif avec une base de données MySQL, elle intègre la gestion des produits, un panier dynamique, un système de commandes et une interface d'administration. Le design responsive a été conçu avec Tailwind CSS pour offrir une expérience d'achat fluide et moderne sur tous les écrans.",
+    technologies: ["Php", "MySQL", "Tailwind CSS", "CSS"],
+    demoLink: "https://pkangorshop.gt.tc/",
+    repoLink: "https://github.com/Meliodas-le-vide/E-commerce", 
+    image: img5,
   },
 ]
 

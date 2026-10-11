@@ -1,32 +1,47 @@
 "use client"
-import { IconCloud } from "@/components/ui/icon-cloud";
+import { useEffect, useState } from "react"
+import { IconCloud } from "@/components/ui/icon-cloud"
 import {
   AnimatedSpan,
   Terminal,
   TypingAnimation,
-} from "@/components/ui/terminal";
+} from "@/components/ui/terminal"
 
 const slugs = [
-  "typescript", "javascript", "dart", "java", "react", "flutter",
-  "android", "html5", "css3", "nodedotjs", "express", "nextdotjs",
-  "prisma", "amazonaws", "postgresql", "firebase", "nginx", "vercel",
-  "testinglibrary", "jest", "cypress", "docker", "git",
-  "github", "gitlab", "visualstudiocode", "androidstudio", "sonarqube", "figma",
-  "unity","php","laravel", "vue.js", "tailwindcss", "nestjs", "mongodb", "mysql", "wordpress"
-];
+  "typescript", "javascript", "dart", "react", "flutter",
+  "html5", "css3", "nodedotjs", "express", "nextdotjs",
+  "prisma", "amazonaws", "postgresql", "firebase", "vercel",
+  "docker", "git", "github", "gitlab", "visualstudiocode",
+  "androidstudio", "figma", "php", "laravel", "vue.js", "tailwindcss",
+  "nestjs", "mongodb", "mysql", "wordpress",
+]
 
 const Home = () => {
-  const images = slugs.map(
-    (slug) => `https://cdn.simpleicons.org/${slug}/${slug}`
-  );
+  const [cloudSize, setCloudSize] = useState(300)
+
+  useEffect(() => {
+    const updateSize = () => {
+      const w = window.innerWidth
+      if (w < 400) setCloudSize(260)
+      else if (w < 640) setCloudSize(320)
+      else if (w < 768) setCloudSize(380)
+      else if (w < 1024) setCloudSize(450)
+      else setCloudSize(600)
+    }
+    updateSize()
+    window.addEventListener("resize", updateSize)
+    return () => window.removeEventListener("resize", updateSize)
+  }, [])
+
+  const images = slugs.map((slug) => `https://cdn.simpleicons.org/${slug}`)
+  const iconSize = Math.round(cloudSize * 0.1) 
 
   return (
     <div
-      className="flex flex-col-reverse md:flex-row justify-center items-center md:my-32 my-10 gap-10 px-4 overflow-x-hidden"
+      className="flex flex-col-reverse md:flex-row justify-center items-center md:my-32 my-10 gap-10 px-4 overflow-x-hidden w-full"
       id="Home"
     >
-
-      <Terminal className="w-full max-w-3xl text-base shrink-0">
+      <Terminal className="w-full max-w-3xl text-sm sm:text-base shrink-0">
         <TypingAnimation>&gt; whoami</TypingAnimation>
         <AnimatedSpan className="text-green-500">
           AKESSE KAMENAN GUY EZECHIEL
@@ -50,7 +65,7 @@ const Home = () => {
 
         <TypingAnimation>&gt; skills</TypingAnimation>
         <AnimatedSpan className="text-orange-400">
-          Frontend    Next.js - React - Vue.js - Tailwind CSS - wordpress 
+          Frontend    Next.js - React - Vue.js - Tailwind CSS - wordpress
         </AnimatedSpan>
         <AnimatedSpan className="text-orange-400">
           Backend     NestJS - Laravel - Node.js - PHP
@@ -62,7 +77,7 @@ const Home = () => {
           Database     MySQL - MongoDB - REST API - PostgreSQL - Firebase
         </AnimatedSpan>
         <AnimatedSpan className="text-orange-400">
-          Tools        Git - GitHub - Figma - Postman 
+          Tools        Git - GitHub - Figma - Postman
         </AnimatedSpan>
 
         <TypingAnimation>&gt; goal</TypingAnimation>
@@ -76,12 +91,19 @@ const Home = () => {
         </TypingAnimation>
       </Terminal>
 
- 
-      <div className="relative flex items-center justify-center shrink-0">
-        <IconCloud images={images} size={600} iconSize={60} />
+      <div
+        className="relative flex items-center justify-center shrink-0"
+        style={{ width: cloudSize, height: cloudSize }}
+      >
+        <IconCloud
+          images={images}
+          size={cloudSize}
+          iconSize={iconSize}
+          showControl={false}
+        />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

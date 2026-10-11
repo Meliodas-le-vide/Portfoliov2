@@ -17,128 +17,31 @@ import imgGITHUB from "../assets/technologies/github.svg"
 import imgFIGMA from "../assets/technologies/figma.png"
 import imgNESTJS from "../assets/technologies/nestjs.png"
 import imgPOSTMAN from "../assets/technologies/postman.png"
-import imgWORDPRESS from  "../assets/technologies/wordpress.png"
+import imgWORDPRESS from "../assets/technologies/wordpress.png"
 
 import weCodeImg from "../assets/compagnies/epitech.png"
 import cercoImg from "../assets/compagnies/cerco.png"
 
 const skills = [
-  { 
-    id: 1, 
-    name: "HTML", 
-    image: imgHTML 
-},
-
-  { 
-    id: 2, 
-    name: "CSS", 
-    image: imgCSS 
-},
-
-  { 
-    id: 3, 
-    name: "PHP", 
-    image: imgPHP 
- },
-
-  { 
-    id: 4, 
-    name: 
-    "JavaScript", 
-    image: imgJS   
-  },
-
-  { 
-    id: 5, 
-    name: "Tailwind CSS", 
-    image: imgTAILWIND 
-  },
-
-  { 
-    id: 6, 
-    name: "React", 
-    image: imgREACT 
-  },
-
-  { 
-    id: 7, 
-    name: "Vue.js", 
-    image: imgVUEJS 
-  },
-
-  { 
-    id: 8, 
-    name: "Next.js", 
-    image: imgNEXTJS 
-  },
-
-  { 
-    id: 9, 
-    name: "Laravel", 
-    image: imgLARAVEL 
-  },
-
-  { 
-    id: 10, 
-    name: "Node.js", 
-    image: imgNODEJS 
-  },
-
-  { 
-    id: 11, 
-    name: "NestJS", 
-    image: imgNESTJS 
-
-  },
-
-  { 
-    id: 12, 
-    name: "MySQL", 
-    image: imgMYSQL 
- },
-
-  { 
-    id: 13, 
-    name: "PostgreSQL", 
-    image: imgPOSTGRESQL 
- },
-
-  { 
-    id: 14, 
-    name: "MongoDB", 
-    image: imgMONGODB 
-  },
-
-  { 
-    id: 15, 
-    name: "Flutter", 
-    image: imgFLUTTER 
-  },
-
-  { 
-    id: 16, 
-    name: "GitHub", 
-    image: imgGITHUB 
-  },
-
-  { 
-    id: 17, 
-    name: "Figma", 
-    image: imgFIGMA 
-  },
-
-  { 
-    id: 18, 
-    name: "Postman", 
-    image: imgPOSTMAN 
- },
-
-   { 
-    id: 19, 
-    name: "Wordpress", 
-    image: imgWORDPRESS 
- },
-
+  { id: 1, name: "HTML", image: imgHTML },
+  { id: 2, name: "CSS", image: imgCSS },
+  { id: 3, name: "PHP", image: imgPHP },
+  { id: 4, name: "JavaScript", image: imgJS },
+  { id: 5, name: "Tailwind CSS", image: imgTAILWIND },
+  { id: 6, name: "React", image: imgREACT },
+  { id: 7, name: "Vue.js", image: imgVUEJS },
+  { id: 8, name: "Next.js", image: imgNEXTJS },
+  { id: 9, name: "Laravel", image: imgLARAVEL },
+  { id: 10, name: "Node.js", image: imgNODEJS },
+  { id: 11, name: "NestJS", image: imgNESTJS },
+  { id: 12, name: "MySQL", image: imgMYSQL },
+  { id: 13, name: "PostgreSQL", image: imgPOSTGRESQL },
+  { id: 14, name: "MongoDB", image: imgMONGODB },
+  { id: 15, name: "Flutter", image: imgFLUTTER },
+  { id: 16, name: "GitHub", image: imgGITHUB },
+  { id: 17, name: "Figma", image: imgFIGMA },
+  { id: 18, name: "Postman", image: imgPOSTMAN },
+  { id: 19, name: "Wordpress", image: imgWORDPRESS },
 ]
 
 const XP = [
@@ -169,70 +72,70 @@ const XP = [
 
 const Experience = () => {
   return (
-    <section id="experiences" className="relative w-full overflow-hidden px-4 py-16 md:py-24">
-
+    <section
+      id="experiences"
+      className="relative w-full overflow-hidden px-4 py-16 md:py-24"
+    >
       <Title title="Mes expériences" />
 
-      <div className="mx-auto mt-12 flex max-w-6xl flex-col-reverse items-center justify-center gap-12 md:flex-row md:items-start md:gap-16">
-        <div className="w-full md:w-1/2">
-          <h3 className="mb-6 text-center text-lg font-semibold opacity-80 md:text-left">
+      <div className="mx-auto mt-12 flex max-w-6xl flex-col items-stretch justify-center gap-12 lg:flex-row lg:items-start lg:gap-16">
+        <div className="w-full lg:w-1/2">
+          <h3 className="mb-6 text-center text-lg font-semibold opacity-80 lg:text-left">
             Technologies & outils
           </h3>
-          
-          <div className="flex flex-wrap justify-center gap-4 md:justify-start">
+
+          <div className="grid grid-cols-3 gap-3 sm:grid-cols-4 sm:gap-4 md:grid-cols-5 lg:grid-cols-4 xl:grid-cols-5">
             {skills.map((skill) => (
               <div
                 key={skill.id}
                 className="group flex flex-col items-center"
               >
-                <div className="flex h-20 w-20 items-center justify-center rounded-full border-2 border-sky-500/70 p-2 transition-all duration-300 group-hover:scale-110 group-hover:border-sky-500 group-hover:shadow-lg group-hover:shadow-sky-500/30">
+                <div className="flex h-14 w-14 items-center justify-center rounded-full border-2 border-sky-500/70 p-1.5 transition-all duration-300 group-hover:scale-110 group-hover:border-sky-500 group-hover:shadow-lg group-hover:shadow-sky-500/30 sm:h-16 sm:w-16 sm:p-2 md:h-18 md:w-18 lg:h-16 lg:w-16 xl:h-20 xl:w-20">
                   <img
                     src={skill.image}
                     alt={skill.name}
+                    loading="lazy"
                     className="h-full w-full rounded-full object-contain"
                   />
                 </div>
 
-                <span className="mt-2 text-xs font-medium opacity-80">
+                <span className="mt-2 text-center text-[10px] font-medium opacity-80 sm:text-xs">
                   {skill.name}
                 </span>
-
               </div>
             ))}
           </div>
         </div>
 
-        <div className="w-full md:w-1/2">
-          <h3 className="mb-6 text-center text-lg font-semibold opacity-80 md:text-left">
-            Parcours & formations
+        <div className="w-full lg:w-1/2">
+          <h3 className="mb-6 text-center text-lg font-semibold opacity-80 lg:text-left">
+            Expériences & Formations
           </h3>
 
           <div className="flex flex-col space-y-4">
-
             {XP.map((xp) => (
               <div
                 key={xp.id}
-                className="flex flex-col rounded-xl bg-base-100 p-5 shadow-md transition-shadow duration-300 hover:shadow-lg"
+                className="flex flex-col rounded-xl bg-base-100 p-4 shadow-md transition-shadow duration-300 hover:shadow-lg sm:p-5"
               >
-                <div className="flex items-center">
+                <div className="flex flex-col items-center gap-3 text-center sm:flex-row sm:items-center sm:text-left">
                   <img
                     src={xp.image}
                     alt={xp.company}
-                    className="h-16 w-16 shrink-0 rounded-lg object-cover"
+                    loading="lazy"
+                    className="h-14 w-14 shrink-0 rounded-lg object-cover sm:h-16 sm:w-16"
                   />
 
-                  <div className="ml-4">
+                  <div className="sm:ml-4">
                     <h4 className="text-base font-bold text-orange-400 md:text-lg">
                       {xp.role}
                     </h4>
                     <p className="text-sm font-medium">{xp.company}</p>
-
                     <span className="text-xs opacity-70">{xp.period}</span>
                   </div>
                 </div>
 
-                <ul className="mt-3 ml-4 list-disc space-y-1 pl-4 text-sm opacity-90">
-
+                <ul className="mt-3 list-disc space-y-1 pl-5 text-xs opacity-90 sm:ml-4 sm:pl-4 sm:text-sm">
                   {xp.description.map((desc, index) => (
                     <li key={index}>{desc}</li>
                   ))}
@@ -241,7 +144,6 @@ const Experience = () => {
             ))}
           </div>
         </div>
-
       </div>
     </section>
   )
