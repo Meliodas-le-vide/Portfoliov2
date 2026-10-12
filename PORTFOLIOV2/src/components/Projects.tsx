@@ -34,8 +34,8 @@ const projects = [
     description:
       "Application de gestion de notes façon Post-it. Interface responsive avec Vue.js et Tailwind CSS, connectée à une API REST via Axios pour créer, modifier et supprimer des notes en temps réel.",
     technologies: ["Vue.js", "Tailwind CSS", "TypeScript", "REST API"],
-    demoLink: "https://my-postit-iota.vercel.app/",
-    repoLink: "#", 
+    demoLink: "https://my-contacts-wine-three.vercel.app/",
+    repoLink: "https://github.com/Meliodas-le-vide/MyContacts", 
     image: img4,
   },
 
