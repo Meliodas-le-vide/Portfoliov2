@@ -1,7 +1,7 @@
 import Title from "./Title"
 import img2 from "../assets/projects/avea.png"
 import img3 from "../assets/projects/movies.png"
-import img4 from "../assets/projects/post-it.png"
+import img4 from "../assets/projects/Post.png"
 import img1 from "../assets/projects/portfolio.png"
 import img5 from "../assets/projects/ecom.png"
 import { Code, ExternalLink } from "lucide-react"
